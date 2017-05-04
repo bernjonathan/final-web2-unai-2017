@@ -1,0 +1,62 @@
+<!doctype html>
+
+<html>
+<head>
+    
+
+    <title>
+        Wikipedia Viewer Bern </title>
+        <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="styleberne.css">
+
+</head>
+
+<body>
+        <script src="jquerye-3.2.0.min.js"></script>
+        <script src="jquerye-ui.min.js"></script>
+        <script type="text/javascript">
+    $('document').ready(function() {
+
+  $('#search').on('click', function() {
+
+    var text = $('#searchTerm').val();
+
+    var url = 'https://en.wikipedia.org/w/api.php?action=opensearch&search=' + text + '&format=json&callback=?';
+    $.getJSON(url, function(wiki) {
+      console.log(wiki);
+
+      $("#output").empty();
+
+      for (var i = 0; i < wiki[1].length; i++) {
+        $("#output").append("<h2>" + wiki[1][i] + "</h2>" + "<p>" + wiki[2][i] + "</p>" + "<h3><a href=" + wiki[3][i] + " target=_blank>Wikipedia Link</a></h3>")
+      }
+
+    });
+  });
+});
+</script>>
+<div class="container">
+  <h1>WIKIPEDIA VIEWER BERN</h1>
+<img id="title" src="http://4.bp.blogspot.com/-LV4gYLR-Y50/Uk7Kj0T5vII/AAAAAAAAAIA/qVFNy16mYVw/s1600/wikipedia1.png"></div>
+  <h3><a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">CLICK HERE FOR A RANDOM WIKIPEDIA ARTICLE</a></h3>
+
+<br>
+<div class="container">
+  <input class="form-control" id="searchTerm" type="text" placeholder="Search for a Wikipedia Article "autocomplete="on" autofocus /><br>
+  <div class="text-center">
+    <button id="search" type="button" class="btn btn-primary">Search</button>
+  </div>
+  </div>
+  </br>
+  </body>
+<div id="output" class="contaner-fluid">
+  <div class=" text-center">
+<div class="center">
+</div>
+</div>
+</div>
+
+</div>
+</body>
+</html>   
