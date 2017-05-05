@@ -45,12 +45,7 @@ h1 {
   color: white;
   background-color: #4099FF;
 }
-#facebook {
-  float: right;
-  margin: 20px 30px 0 0;
-  color: white;
-  background-color: blue;
-}
+
 @media only screen and (max-width: 600px) {
   .quote {
     margin: 0;
@@ -71,11 +66,5 @@ h1 {
     display: block;
     clear: both;
   }
-   #facebook {
-    margin: 1px 1px 1px 1px;
-    padding: 10px 0 10px 0;
-    float: none;
-    display: block;
-    clear: both;
-  }
+ 
 }

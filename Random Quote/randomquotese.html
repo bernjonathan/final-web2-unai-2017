@@ -40,7 +40,7 @@
 						        "color": colors[n]
 						      		}, 1000);
 	      		$('#twitter').attr('href', 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('"' + currentQuote + '" ' + currentAuthor));
-	      		$('#facebook').attr('href', 'https://www.facebook.com/share.php?u=quotes&related=freecodecamp&text=' + encodeURIComponent('"' + currentQuote + '" ' + currentAuthor));
+	      		
       //ajax di masukin ke html
       //ajax di masukin ke html
       				$('.author').text('- ' + currentAuthor);
@@ -74,8 +74,8 @@
         				<p class="quote"></p>
        						 <h3 class="author"></h3>
       							<a id="newQuote"id="newQuote" class="btn btn-primary"  type="button" ">New Quote</a>
-      							<a id="twitter"id="twitter" class="btn fa fa-twtter"  type="button" ">Quote Twitter</a>
-      							<a id="facebook"id="twitter" class="btn fa fa-facebook"  type="button" ">Quote Facebook</a>
+      							<a id="twitter"id="twitter" class="btn fa fa-twitter"  type="button" ">Tweet it!</a>
+      							
       
       				</div>
     			</div>			
